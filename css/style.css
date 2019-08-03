@@ -1,0 +1,376 @@
+/**
+  * Pizza Game Manuel CSS
+  *
+  * Author: Plasterbranflakes
+  * Description: Styles to make the Pizza Manuel into a pizza
+  * License: Unlicense
+  */
+
+@font-face {
+	font-family: 'SP Aftershock';
+	font-style: normal;
+	font-weight: normal;
+	src: local('SP Aftershock'), url('../fonts/sp-aftershock.woff') format('woff');
+}
+
+html {
+	font-size: 145%;
+	text-shadow: #5663c266 0px 0px 1px;
+}
+
+body {
+	background: url('../img/bg_dots.webp');
+	background-attachment: fixed;
+	color: #603757;
+	font-family: Montserrat, Calibri;
+	font-size: .85rem;
+	padding: 1em;
+}
+
+.body-alt {
+	background: url('../img/bg_dots-blue.webp');
+	max-width: 1100px;
+	flex-direction: column;
+}
+
+a {
+	color: #d955a4;
+}
+
+a[href^="https://"]::after {
+	content: url('../img/external.svg');
+	display: inline-block;
+	padding-left: .3em;
+}
+
+a:visited {
+	color: #a88288;
+	text-decoration: line-through;
+}
+
+a.active,
+a:active,
+a:focus,
+a:hover {
+	color: #d554af;
+	text-decoration: none;
+	background: #ffff87;
+	border-bottom: 2px solid #fcadd5;
+}
+
+audio {
+	background: #4300f9;
+	width: 100%;
+}
+
+code {
+	color: #050202;
+	font-size: 90%;
+}
+
+.dl-terms {
+	background: #ffe2e85e;
+    border: 1px solid;
+	font-size: .8rem;
+	padding: 1rem;
+}
+
+.dt-term,
+.dd-term {
+	display: inline;
+}
+
+.dt-license {
+	display: flex;
+}
+
+.license__name {
+	flex: 0 0 max-content;
+}
+
+.dt-license::after {
+  content: '';
+  border-bottom: 1px dashed #bf5fce;
+  width: 100%;
+  height: 1px;
+  margin-top: 12px;
+  margin-left: 1rem;
+}
+
+figcaption {
+	color: #858399;
+	font-size: .8rem;
+	text-align: center;
+}
+
+.figure-right {
+	float: right;
+	margin-right: 0;
+	max-width: 400px;
+}
+
+.figure-polaroid {
+	background: #ffffff80;
+	border: 1px solid #ececec;
+	border-radius: 6px;
+	padding: .5rem;
+	width: 300px;
+	max-width: 100%;
+}
+
+footer {
+	margin-top: 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #c77ed2;
+	font-family: 'SP Aftershock', 'Arial Narrow Bold', sans-serif;
+	font-weight: normal;
+}
+
+.heading-alt {
+	font-size: 3rem;
+	margin-top: 2rem;
+	text-align: center;
+}
+
+section h1 {
+	color: #9a7bf9;
+	text-transform: uppercase;
+}
+
+@supports (-webkit-text-stroke: 1px #fff) or (-moz-text-stroke: 1px #fff) {
+	h1, h2, h3, h4, h5, h6 {
+		color: #f8c9ff;
+		text-shadow: 1px 1px #aaa4cc;
+		-webkit-text-stroke: 1px #7252ac;
+	}
+
+	h3 {
+		color: white;
+	}
+
+	section h1 {
+		color: #d2c3ff;
+		text-shadow: 2px 2px 0 #110526;
+		-webkit-text-stroke: 1px #554cd7;
+	}
+}
+
+@supports ((-webkit-text-stroke: 1px #fff) or (-moz-text-stroke: 1px #fff)) and (paint-order: stroke fill) {
+	h1, h2, h3, h4, h5, h6 {
+		paint-order: stroke fill;
+		text-shadow: 2px 2px #aaa4cc;
+		-webkit-text-stroke: 3px #7252ac;
+	}
+
+	section h1 {
+		text-transform: uppercase;
+		text-shadow: 3px 3px 0 #8069a8;
+		-webkit-text-stroke: 4px #554cd7;
+	}
+}
+
+header {
+	text-align: center;
+}
+
+img {
+	max-width: 100%;
+}
+
+kbd {
+	background: #d5f2ff;
+	border: 1px solid #abe9ff;
+	color: #0d3454;
+}
+
+li p {
+	display: inline;
+	margin-left: .5rem;
+}
+
+p {
+	margin: 0 0 1.2rem;
+}
+
+section {
+	padding-top: 1em;
+}
+
+table {
+	color: #626262;
+	margin-bottom: 1rem;
+}
+
+.table td, .table th {
+	padding: .2rem;
+}
+
+.usage {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.usage-good,
+.usage-bad {
+	flex: 1 0 50%;
+	min-width: 400px;
+}
+
+.list-good,
+.list-bad {
+	list-style: none;
+}
+
+.list-good li,
+.list-bad li {
+	border-bottom: 1px solid #dfdfdf;
+	padding-bottom: .5rem;
+}
+
+.list-good li::marker,
+.list-bad li::marker {
+	font-size: .6rem;
+	margin-right: .5rem;
+}
+
+.list-good li::marker {
+	content: "\2713";
+	color: #4ee88e;
+}
+
+.list-bad li::marker {
+	content: "\2717";
+	color: #ce6cb1;
+}
+
+main,
+footer {
+	padding: 1em 2em;
+}
+
+main,
+footer,
+.sidebar {
+	background: rgba(255, 255, 255, 0.6);
+}
+
+.sidebar {
+	margin-bottom: 1em;
+	max-height: 200px;
+	overflow-y: scroll;
+	padding: 1em;
+}
+
+.sidebar__title {
+	color: #b9a1e6;
+	font-size: 1.2rem;
+	font-variant: small-caps;
+	text-align: center;
+	text-shadow: none;
+	-webkit-text-stroke: 0;
+
+}
+
+.sidebar__toc {
+	margin: 0;
+}
+
+.sidebar__toc ol {
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+.sidebar__toc li {
+	margin-top: .2rem;
+}
+
+/* TOC on Credits/Privacy Pages */
+.toc {
+	background: #ffffffb3;
+	border: 2px dashed #a29bbf;
+	display: inline-block;
+	padding: 1rem 1rem .5rem;
+}
+
+.toc ol {
+	list-style: lower-roman;
+}
+
+.text-assistive:focus {
+	background-color: #fff;
+	clip: auto !important;
+	height: auto;
+	left: 0;
+	padding: .5em;
+	top: 0;
+	width: auto;
+	z-index: 1;
+}
+
+.h-access {
+	display: inline;
+}
+
+.icon-access {
+	display: inline;
+	vertical-align: top;
+}
+
+
+/** Responsive **/
+
+@media screen and (min-width: 841px) {
+	body {
+		display: flex;
+		display: -ms-flexbox;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin: 0 auto;
+		max-width: 1400px;
+	}
+
+	.sidebar {
+		flex: 0 0 24%;
+		max-height: calc(100vh - 2em);
+		min-height: 0;
+		position: -webkit-sticky;
+		position: sticky;
+		text-align: left;
+		top: 1em;
+	}
+
+	.main {
+		flex: 0 0 75%;
+	}
+}
+
+@media screen and (min-width: 450px) and (max-width: 840px) {
+	.sidebar {
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	td,
+	tr {
+		display: block;
+	}
+
+	td {
+		width: 100%;
+	}
+
+	.table.table-striped tbody tr:nth-of-type(2n+1) {
+		background: none;
+	}
+
+	.table.table-striped tbody tr:nth-of-type(2n+1) td:nth-child(2) {
+		background: #e5f2ff;
+	}
+
+	.table.table-striped tbody tr:nth-of-type(2n+2) td:nth-of-type(odd) {
+		background: #e5f2ff;
+	}
+}
