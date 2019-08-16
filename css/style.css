@@ -98,10 +98,11 @@ code {
 .dt-license::after {
   content: '';
   border-bottom: 1px dashed #bf5fce;
-  width: 100%;
   height: 1px;
   margin-top: 12px;
   margin-left: 1rem;
+  overflow: hidden;
+  width: 600px;
 }
 
 figcaption {
@@ -164,11 +165,11 @@ section h1 {
 	}
 }
 
-@supports ((-webkit-text-stroke: 1px #fff) or (-moz-text-stroke: 1px #fff)) and (paint-order: stroke fill) {
+@supports (paint-order: stroke fill) {
 	h1, h2, h3, h4, h5, h6 {
 		paint-order: stroke fill;
 		text-shadow: 2px 2px #aaa4cc;
-		-webkit-text-stroke: 3px #7252ac;
+		-webkit-text-stroke: 2px #7252ac;
 	}
 
 	section h1 {
